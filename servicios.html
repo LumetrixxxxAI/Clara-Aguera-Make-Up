@@ -1,0 +1,213 @@
+﻿<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Servicios · Clara Agüera Make Up</title>
+<meta name="description" content="Servicios de maquillaje profesional en Málaga: novia, editorial, eventos, maquillaje básico/noche y asesoría de imagen.">
+<link rel="stylesheet" href="css/styles.css">
+<style>
+.page-hero{padding:160px 5vw 80px;text-align:center;background:var(--rose);}
+.page-hero .eyebrow{margin-bottom:16px;}
+.page-hero h1{font-size:clamp(2.5rem,5vw,4rem);font-style:italic;}
+.page-hero p{margin:18px auto 0;max-width:460px;font-size:1rem;color:var(--ink-soft);font-weight:300;}
+
+.srv-section{padding:100px 0;}
+.srv-section:nth-child(even){background:var(--rose);}
+.srv-section:nth-child(odd){background:var(--rose-soft);}
+.srv-block{display:grid;grid-template-columns:1fr 1fr;gap:80px;align-items:center;}
+.srv-block.reverse{direction:rtl;}
+.srv-block.reverse>*{direction:ltr;}
+.srv-photo{border-radius:20px;background:var(--rose-deep);min-height:400px;display:flex;align-items:center;justify-content:center;overflow:hidden;}
+.srv-photo img{width:100%;height:100%;object-fit:cover;}
+.srv-photo span{font-family:'Fraunces',serif;font-style:italic;font-size:1rem;color:var(--crimson-d);opacity:0.4;}
+.srv-info .eyebrow{margin-bottom:16px;}
+.srv-info h2{font-size:clamp(1.8rem,3vw,2.5rem);margin-bottom:18px;}
+.srv-info p{font-size:0.96rem;color:var(--ink-soft);margin-bottom:14px;font-weight:300;}
+.srv-includes{margin:24px 0;padding:0;list-style:none;}
+.srv-includes li{display:flex;align-items:center;gap:10px;font-size:0.88rem;color:var(--ink-soft);padding:8px 0;border-bottom:1px solid rgba(184,8,8,0.08);}
+.srv-includes li::before{content:'✦';font-size:0.6rem;color:var(--crimson);flex-shrink:0;}
+.srv-price{display:inline-block;margin-top:8px;font-family:'Fraunces',serif;font-size:1.5rem;color:var(--crimson);font-weight:600;}
+.srv-price small{font-family:'Manrope',sans-serif;font-size:0.72rem;letter-spacing:0.06em;color:var(--ink-soft);margin-left:6px;font-weight:400;}
+
+@media(max-width:860px){.srv-block,.srv-block.reverse{grid-template-columns:1fr;direction:ltr;gap:40px;}.srv-photo{min-height:260px;}}
+</style>
+</head>
+<body>
+
+<header id="hdr">
+  <a href="index.html"><img src="assets/img/logo.jpeg" alt="Clara Agüera Make Up" class="logo-img"></a>
+  <nav class="links">
+    <a href="servicios.html" class="active">Servicios</a>
+    <a href="galeria.html">Galería</a>
+    <a href="tarifas.html">Tarifas</a>
+    <a href="contacto.html" class="nav-cta">Reservar cita</a>
+  </nav>
+  <div class="burger" id="burger"><span></span><span></span><span></span></div>
+</header>
+
+<div class="mobile-menu" id="mobileMenu">
+  <a href="servicios.html" class="mob-link">Servicios</a>
+  <a href="galeria.html" class="mob-link">Galería</a>
+  <a href="tarifas.html" class="mob-link">Tarifas</a>
+  <a href="contacto.html" class="mob-link btn btn-dark" style="font-family:'Manrope';font-style:normal;font-size:0.8rem;">Reservar cita</a>
+</div>
+
+<div class="page-hero">
+  <span class="eyebrow">Lo que hago</span>
+  <h1>Servicios</h1>
+  <p>Cada servicio está diseñado para que salgas siendo la mejor versión de ti misma.</p>
+</div>
+
+<!-- NOVIA -->
+<section class="srv-section">
+  <div class="container">
+    <div class="srv-block reveal">
+      <div class="srv-photo"><span>Foto novia aquí</span></div>
+      <div class="srv-info">
+        <span class="eyebrow">El más especial</span>
+        <h2>Maquillaje de novia</h2>
+        <p>Tu boda es el día en el que más mereces sentirte tú misma, pero en tu versión más radiante. Trabajo contigo desde la prueba para entender tu estilo, tu piel y lo que quieres transmitir.</p>
+        <p>Producto de larga duración, técnicas de fijación profesional y un resultado que aguanta desde el sí quiero hasta la última canción.</p>
+        <ul class="srv-includes">
+          <li>Prueba previa incluida (con asesoría de estilo)</li>
+          <li>Día de boda · desplazamiento incluido en Málaga</li>
+          <li>Producto profesional de larga duración</li>
+          <li>Coordinación con el equipo de peluquería</li>
+          <li>Retoque final antes de la ceremonia</li>
+        </ul>
+        <span class="srv-price">desde 280€ <small>prueba + día de boda</small></span>
+        <div style="margin-top:24px;"><a href="contacto.html" class="btn btn-dark">Reservar consulta</a></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- EVENTOS -->
+<section class="srv-section">
+  <div class="container">
+    <div class="srv-block reverse reveal">
+      <div class="srv-photo"><span>Foto evento aquí</span></div>
+      <div class="srv-info">
+        <span class="eyebrow">Para cada ocasión</span>
+        <h2>Eventos &amp; Social</h2>
+        <p>Bodas de invitada, comuniones, eventos corporativos, galas, cumpleaños especiales... Cada ocasión merece un look pensado para ella.</p>
+        <p>Maquillaje que dura toda la noche, adaptado a tu look de ropa, tu tipo de piel y la luz del evento.</p>
+        <ul class="srv-includes">
+          <li>Maquillaje completo adaptado al evento</li>
+          <li>Piel, ojos y labios coordinados</li>
+          <li>Producto de larga duración</li>
+          <li>Disponible en domicilio o en estudio</li>
+        </ul>
+        <span class="srv-price">desde 60€</span>
+        <div style="margin-top:24px;"><a href="contacto.html" class="btn btn-dark">Reservar cita</a></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- EDITORIAL -->
+<section class="srv-section">
+  <div class="container">
+    <div class="srv-block reveal">
+      <div class="srv-photo"><span>Foto editorial aquí</span></div>
+      <div class="srv-info">
+        <span class="eyebrow">Para profesionales</span>
+        <h2>Editorial &amp; Shooting</h2>
+        <p>Trabajo con fotógrafos, directores creativos y marcas para crear maquillaje que impacte en imagen. Desde looks naturales de catálogo hasta propuestas artísticas de alto impacto.</p>
+        <p>Experiencia en sets de fotografía y vídeo, conocimiento de cómo el maquillaje se comporta ante distintos tipos de iluminación y cámara.</p>
+        <ul class="srv-includes">
+          <li>Preproducción y mood board conjunto</li>
+          <li>Varios looks en una misma jornada</li>
+          <li>Productos aptos para cámara HD y 4K</li>
+          <li>Disponible en toda la provincia de Málaga</li>
+        </ul>
+        <span class="srv-price">desde 200€ <small>media jornada</small></span>
+        <div style="margin-top:24px;"><a href="contacto.html" class="btn btn-dark">Pedir presupuesto</a></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- MAQUILLAJE DÍA A DÍA -->
+<section class="srv-section">
+  <div class="container">
+    <div class="srv-block reverse reveal">
+      <div class="srv-photo"><span>Foto maquillaje aquí</span></div>
+      <div class="srv-info">
+        <span class="eyebrow">Para cada día</span>
+        <h2>Maquillaje básico &amp; noche</h2>
+        <p>Desde un look natural que potencia tu piel hasta un maquillaje de noche con presencia y duración. Para cada tipo de ocasión, cada tipo de piel.</p>
+        <p>Tanto si quieres algo sutil para una reunión como un look con impacto para una noche especial, lo adaptamos a ti.</p>
+        <ul class="srv-includes">
+          <li>Maquillaje básico · look natural y luminoso</li>
+          <li>Maquillaje de noche · definición y larga duración</li>
+          <li>Look glam / fiesta · brillo, impacto y sofisticación</li>
+          <li>Disponible en domicilio o en estudio en Málaga</li>
+        </ul>
+        <span class="srv-price">desde 40€</span>
+        <div style="margin-top:24px;"><a href="contacto.html" class="btn btn-dark">Reservar cita</a></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ASESORÍA -->
+<section class="srv-section">
+  <div class="container">
+    <div class="srv-block reveal">
+      <div class="srv-photo"><span>Foto asesoría aquí</span></div>
+      <div class="srv-info">
+        <span class="eyebrow">Imagen personal</span>
+        <h2>Asesoría de imagen</h2>
+        <p>Si alguna vez has dudado qué colores te favorecen, qué acabados van con tu tono de piel o cómo adaptar tu maquillaje a distintas ocasiones — esto es para ti.</p>
+        <p>Una hora de consulta en la que analizamos tu colorimetría, morfología facial y construimos una guía de maquillaje personalizada que puedes usar sola.</p>
+        <ul class="srv-includes">
+          <li>Análisis de colorimetría y tono de piel</li>
+          <li>Morfología facial y técnicas de contouring</li>
+          <li>Guía de productos adaptada a tu presupuesto</li>
+          <li>Disponible online (videollamada) o presencial en Málaga</li>
+        </ul>
+        <span class="srv-price">70€ <small>1h de consulta</small></span>
+        <div style="margin-top:24px;"><a href="contacto.html" class="btn btn-dark">Reservar asesoría</a></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="container">
+    <div class="footer-top">
+      <div class="footer-brand">
+        <img src="assets/img/logo.jpeg" alt="Clara Agüera Make Up" style="height:44px;border-radius:6px;margin-bottom:14px;">
+        <p>Maquilladora profesional en Málaga. Novias, editoriales y todo lo que hay en medio.</p>
+      </div>
+      <div class="footer-cols">
+        <div class="footer-col">
+          <h4>Páginas</h4>
+          <a href="servicios.html">Servicios</a>
+          <a href="galeria.html">Galería</a>
+          <a href="tarifas.html">Tarifas</a>
+          <a href="contacto.html">Contacto</a>
+        </div>
+        <div class="footer-col">
+          <h4>Contacto</h4>
+          <span>+34 600 000 000</span>
+          <span>Málaga, España</span>
+          <div class="social-row" style="margin-top:14px;">
+            <a href="#" aria-label="Instagram"><svg viewBox="0 0 24 24"><rect x="2" y="2" width="20" height="20" rx="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg></a>
+            <a href="#" aria-label="TikTok"><svg viewBox="0 0 24 24"><path d="M9 12a4 4 0 1 0 4 4V4a5 5 0 0 0 5 5"/></svg></a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2025 Clara Agüera Make Up · Todos los derechos reservados</span>
+      <span>Málaga, España</span>
+    </div>
+  </div>
+</footer>
+
+<script src="js/main.js"></script>
+</body>
+</html>

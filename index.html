@@ -1,0 +1,283 @@
+﻿<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Clara Agüera Make Up · Maquilladora en Málaga</title>
+<meta name="description" content="Maquilladora profesional en Málaga. Maquillaje de novia, editorial, eventos y clases personalizadas.">
+<link rel="stylesheet" href="css/styles.css">
+<style>
+.hero{min-height:100vh;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding:130px 5vw 100px;position:relative;background:radial-gradient(ellipse at 15% 20%,rgba(184,8,8,0.06),transparent 50%),radial-gradient(ellipse at 88% 80%,rgba(184,8,8,0.04),transparent 55%),var(--rose-soft);}
+.hero-logo{width:min(300px,55vw);margin:0 auto 34px;border-radius:8px;animation:fadeUp .9s ease both;}
+.hero-tag{display:inline-flex;align-items:center;gap:10px;background:rgba(184,8,8,0.07);border:1px solid rgba(184,8,8,0.15);border-radius:40px;padding:7px 18px;font-size:0.7rem;letter-spacing:0.18em;text-transform:uppercase;color:var(--crimson);font-weight:500;margin-bottom:28px;animation:fadeUp .9s ease .1s both;}
+.hero-tag::before{content:'';width:6px;height:6px;border-radius:50%;background:var(--crimson);}
+.hero h1{font-size:clamp(2.8rem,7vw,6rem);font-style:italic;color:var(--ink);max-width:760px;line-height:1.0;animation:fadeUp .9s ease .2s both;}
+.hero h1 em{color:var(--crimson);}
+.hero .sub{margin:24px auto 0;max-width:400px;font-size:1rem;color:var(--ink-soft);font-weight:300;animation:fadeUp .9s ease .3s both;}
+.hero-actions{display:flex;gap:16px;justify-content:center;margin-top:42px;flex-wrap:wrap;animation:fadeUp .9s ease .4s both;}
+.scroll-cue{position:absolute;bottom:38px;left:50%;transform:translateX(-50%);display:flex;flex-direction:column;align-items:center;gap:8px;color:var(--crimson);opacity:0.6;animation:bob 2.6s ease-in-out infinite;}
+.scroll-cue span{font-size:0.58rem;letter-spacing:0.3em;text-transform:uppercase;font-weight:600;}
+
+.about-inner{display:grid;grid-template-columns:1fr 1fr;gap:90px;align-items:center;}
+.about-visual{display:grid;grid-template-columns:1fr 1fr;gap:14px;}
+.about-card{border-radius:16px;background:var(--rose);border:1px solid rgba(184,8,8,0.12);display:flex;align-items:flex-end;padding:18px;aspect-ratio:1;overflow:hidden;transition:transform .4s ease,box-shadow .4s ease;cursor:pointer;min-height:220px;}
+.about-card:hover{transform:translateY(-6px);box-shadow:0 20px 40px rgba(184,8,8,0.1);}
+.about-card.tall{grid-row:span 2;aspect-ratio:auto;min-height:460px;}
+.about-card img{width:100%;height:100%;object-fit:cover;border-radius:10px;}
+.about-card span{font-family:'Fraunces',serif;font-style:italic;font-size:0.9rem;color:var(--crimson-d);opacity:0.65;}
+.about-text .eyebrow{margin-bottom:18px;}
+.about-text h2{font-size:clamp(2rem,3.5vw,2.9rem);margin-bottom:22px;}
+.about-text p{color:var(--ink-soft);margin-bottom:14px;font-size:0.97rem;font-weight:300;}
+.about-stats{display:flex;gap:44px;margin-top:36px;padding-top:32px;border-top:1px solid rgba(184,8,8,0.12);}
+.about-stats div strong{display:block;font-family:'Fraunces',serif;font-size:2.2rem;color:var(--crimson);line-height:1;}
+.about-stats div span{font-size:0.68rem;letter-spacing:0.1em;color:var(--ink-soft);text-transform:uppercase;margin-top:5px;display:block;}
+
+.services-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px;}
+.service-card{background:var(--white);border-radius:20px;padding:42px 30px;border:1px solid rgba(184,8,8,0.08);transition:transform .35s ease,box-shadow .35s ease;position:relative;overflow:hidden;}
+.service-card::after{content:'';position:absolute;bottom:0;left:0;right:0;height:3px;background:var(--crimson);transform:scaleX(0);transform-origin:left;transition:transform .35s ease;}
+.service-card:hover{transform:translateY(-8px);box-shadow:0 24px 50px rgba(184,8,8,0.08);}
+.service-card:hover::after{transform:scaleX(1);}
+.service-icon{width:48px;height:48px;background:rgba(184,8,8,0.07);border-radius:12px;display:flex;align-items:center;justify-content:center;margin-bottom:26px;}
+.service-icon svg{width:22px;height:22px;stroke:var(--crimson);fill:none;stroke-width:1.6;stroke-linecap:round;}
+.service-card h3{font-size:1.18rem;margin-bottom:12px;}
+.service-card p{font-size:0.88rem;color:var(--ink-soft);line-height:1.65;font-weight:300;}
+.service-tag{display:inline-block;margin-top:20px;font-size:0.68rem;letter-spacing:0.08em;text-transform:uppercase;color:var(--crimson);font-weight:600;}
+.service-card-dark{background:var(--ink);border-color:transparent;}
+.service-card-dark h3{color:var(--rose-soft);}
+.service-card-dark p{color:rgba(242,214,214,0.6);}
+
+.gallery-head{display:flex;justify-content:space-between;align-items:flex-end;margin-bottom:46px;}
+.gallery-head h2{font-size:clamp(1.8rem,3.2vw,2.5rem);}
+.gallery-link{font-size:0.78rem;letter-spacing:0.06em;text-transform:uppercase;color:var(--crimson);font-weight:600;display:flex;align-items:center;gap:8px;}
+.gallery-link svg{width:16px;height:16px;stroke:currentColor;fill:none;stroke-width:2;}
+.gallery-grid{display:grid;grid-template-columns:2fr 1fr 1fr;grid-template-rows:260px 260px;gap:14px;}
+.g-item{border-radius:16px;background:var(--rose);border:1px solid rgba(184,8,8,0.1);display:flex;align-items:center;justify-content:center;overflow:hidden;cursor:pointer;transition:transform .35s ease;}
+.g-item:hover{transform:scale(1.02);}
+.g-item.big{grid-row:span 2;}
+.g-item img{width:100%;height:100%;object-fit:cover;}
+.g-placeholder{font-family:'Fraunces',serif;font-style:italic;font-size:0.9rem;color:var(--crimson-d);opacity:0.4;}
+
+.tarifas-cta{background:var(--ink);text-align:center;padding:100px 5vw;}
+.tarifas-cta h2{font-size:clamp(2rem,4vw,3rem);color:var(--rose-soft);margin-bottom:16px;}
+.tarifas-cta p{font-size:0.96rem;color:rgba(242,214,214,0.55);max-width:420px;margin:0 auto 36px;font-weight:300;}
+.tarifas-cta .eyebrow{color:var(--rose-deep);margin-bottom:14px;}
+
+.booking-inner{display:grid;grid-template-columns:1fr 1.1fr;gap:80px;align-items:start;}
+.booking-text .eyebrow{margin-bottom:16px;}
+.booking-text h2{font-size:clamp(1.9rem,3.4vw,2.6rem);margin-bottom:20px;}
+.booking-text p{color:var(--ink-soft);font-size:0.96rem;margin-bottom:28px;font-weight:300;}
+.contact-line{display:flex;align-items:center;gap:14px;margin-bottom:14px;}
+.contact-line svg{width:18px;height:18px;stroke:var(--crimson);fill:none;stroke-width:1.6;flex-shrink:0;}
+.contact-line span{font-size:0.9rem;color:var(--ink-soft);}
+
+@keyframes fadeUp{from{opacity:0;transform:translateY(24px);}to{opacity:1;transform:translateY(0);}}
+@keyframes bob{0%,100%{transform:translateX(-50%) translateY(0);}50%{transform:translateX(-50%) translateY(8px);}}
+
+@media(max-width:960px){.about-inner{grid-template-columns:1fr;gap:50px;}.about-visual{max-width:420px;margin:0 auto;}.services-grid{grid-template-columns:1fr 1fr;}.gallery-grid{grid-template-columns:1fr 1fr;grid-template-rows:auto;}.g-item.big{grid-row:span 1;min-height:220px;}.booking-inner{grid-template-columns:1fr;gap:44px;}}
+@media(max-width:580px){.services-grid{grid-template-columns:1fr;}.gallery-grid{grid-template-columns:1fr;}.about-stats{gap:24px;}}
+</style>
+</head>
+<body>
+
+<header id="hdr">
+  <a href="index.html" style="font-family:'Fraunces',serif;font-style:italic;font-size:1.25rem;font-weight:600;color:var(--crimson);letter-spacing:-0.01em;">Clara Agüera</a>
+  <nav class="links">
+    <a href="servicios.html">Servicios</a>
+    <a href="galeria.html">Galería</a>
+    <a href="tarifas.html">Tarifas</a>
+    <a href="contacto.html" class="nav-cta">Reservar cita</a>
+  </nav>
+  <div class="burger" id="burger"><span></span><span></span><span></span></div>
+</header>
+
+<div class="mobile-menu" id="mobileMenu">
+  <a href="servicios.html" class="mob-link">Servicios</a>
+  <a href="galeria.html" class="mob-link">Galería</a>
+  <a href="tarifas.html" class="mob-link">Tarifas</a>
+  <a href="contacto.html" class="mob-link btn btn-dark" style="font-family:'Manrope';font-style:normal;font-size:0.8rem;">Reservar cita</a>
+</div>
+
+<section class="hero">
+  <img src="assets/img/logo.jpeg" alt="Clara Agüera Make Up" class="hero-logo">
+  <div class="hero-tag">Maquilladora profesional · Málaga</div>
+  <h1>El maquillaje<br>que <em>te define.</em></h1>
+  <p class="sub">De novias a editoriales. Creo looks que duran, impactan y cuentan tu historia.</p>
+  <div class="hero-actions">
+    <a href="contacto.html" class="btn btn-dark">Reservar cita</a>
+    <a href="galeria.html" class="btn btn-ghost">Ver mi trabajo</a>
+  </div>
+</section>
+
+<section style="background:var(--rose-soft);padding:120px 0 100px;" id="sobre-mi">
+  <div class="container">
+    <div class="about-inner">
+      <div class="about-visual reveal">
+        <div class="about-card tall"><span>Añade foto aquí</span></div>
+        <div class="about-card"><span>Foto</span></div>
+        <div class="about-card"><span>Foto</span></div>
+      </div>
+      <div class="about-text reveal">
+        <span class="eyebrow">Sobre mí</span>
+        <h2>Hola, soy Clara.</h2>
+        <p>Llevo más de 8 años dedicada al maquillaje profesional en Málaga. Me especializo en crear looks que se adaptan a ti — tu piel, tu personalidad, tu momento.</p>
+        <div class="about-socials" style="display:flex;gap:14px;margin-top:8px;margin-bottom:4px;">
+          <a href="#" aria-label="Instagram" style="width:48px;height:48px;border:1px solid rgba(184,8,8,0.25);border-radius:50%;display:flex;align-items:center;justify-content:center;transition:background .3s,border-color .3s;">
+            <svg viewBox="0 0 24 24" style="width:20px;height:20px;stroke:var(--crimson);fill:none;stroke-width:1.6;"><rect x="2" y="2" width="20" height="20" rx="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
+          </a>
+          <a href="#" aria-label="TikTok" style="width:48px;height:48px;border:1px solid rgba(184,8,8,0.25);border-radius:50%;display:flex;align-items:center;justify-content:center;transition:background .3s,border-color .3s;">
+            <svg viewBox="0 0 24 24" style="width:20px;height:20px;stroke:var(--crimson);fill:none;stroke-width:1.6;stroke-linecap:round;"><path d="M9 12a4 4 0 1 0 4 4V4a5 5 0 0 0 5 5"/></svg>
+          </a>
+        </div>
+        <div class="about-stats">
+          <div><strong>+300</strong><span>Novias maquilladas</span></div>
+          <div><strong>8+</strong><span>Años de experiencia</span></div>
+          <div><strong>Málaga</strong><span>y provincia</span></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section style="background:var(--rose);padding:120px 0 100px;" id="servicios">
+  <div class="container">
+    <div class="section-head reveal">
+      <span class="eyebrow">Qué ofrezco</span>
+      <h2>Servicios</h2>
+      <p>Cada servicio está pensado para que salgas sintiéndote tú, pero en tu mejor versión.</p>
+    </div>
+    <div class="services-grid">
+      <div class="service-card reveal">
+        <div class="service-icon"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M8 14s1.5 2 4 2 4-2 4-2"/><line x1="9" y1="9" x2="9.01" y2="9"/><line x1="15" y1="9" x2="15.01" y2="9"/></svg></div>
+        <h3>Maquillaje de novia</h3>
+        <p>Tu día más especial merece el mejor maquillaje. Prueba previa incluida, asesoría de estilo y producto de larga duración.</p>
+        <a href="servicios.html" class="service-tag">Incluye prueba →</a>
+      </div>
+      <div class="service-card reveal">
+        <div class="service-icon"><svg viewBox="0 0 24 24"><rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8M12 17v4"/></svg></div>
+        <h3>Editorial & Shooting</h3>
+        <p>Maquillaje artístico para sesiones de foto, vídeo, catálogos de moda y campañas publicitarias.</p>
+        <a href="servicios.html" class="service-tag">Para profesionales →</a>
+      </div>
+      <div class="service-card reveal">
+        <div class="service-icon"><svg viewBox="0 0 24 24"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87M16 3.13a4 4 0 0 1 0 7.75"/></svg></div>
+        <h3>Eventos & Social</h3>
+        <p>Bodas de invitada, eventos corporativos, comuniones y cualquier ocasión especial.</p>
+        <a href="servicios.html" class="service-tag">Desde 60€ →</a>
+      </div>
+      <div class="service-card reveal">
+        <div class="service-icon"><svg viewBox="0 0 24 24"><path d="M12 2a5 5 0 1 0 0 10A5 5 0 0 0 12 2z"/><path d="M4 20c0-4 3.6-7 8-7s8 3 8 7"/></svg></div>
+        <h3>Maquillaje básico & noche</h3>
+        <p>Desde un look natural de día hasta un maquillaje de noche con impacto. Para cada ocasión y cada tipo de piel.</p>
+        <a href="tarifas.html" class="service-tag">Ver tarifas →</a>
+      </div>
+      <div class="service-card reveal">
+        <div class="service-icon"><svg viewBox="0 0 24 24"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg></div>
+        <h3>Asesoría de imagen</h3>
+        <p>Análisis de tu tono de piel, morfología facial y estilo personal para crear tu guía de maquillaje.</p>
+        <a href="servicios.html" class="service-tag">Online o presencial →</a>
+      </div>
+      <div class="service-card service-card-dark reveal">
+        <div class="service-icon" style="background:rgba(242,214,214,0.1)"><svg viewBox="0 0 24 24" style="stroke:var(--rose)"><path d="M20 7H4a2 2 0 0 0-2 2v6a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V9a2 2 0 0 0-2-2z"/><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"/></svg></div>
+        <h3>¿Tienes algo especial?</h3>
+        <p>Cuéntame lo que necesitas y te preparo un presupuesto personalizado sin compromiso.</p>
+        <a href="contacto.html" class="service-tag" style="color:var(--rose)">Contactar →</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section style="background:var(--rose-soft);padding:120px 0 100px;" id="galeria">
+  <div class="container">
+    <div class="gallery-head reveal">
+      <div><span class="eyebrow">Portfolio</span><h2>Mi trabajo</h2></div>
+      <a href="galeria.html" class="gallery-link">Ver todo <svg viewBox="0 0 16 16"><line x1="3" y1="13" x2="13" y2="3"/><polyline points="7 3 13 3 13 9"/></svg></a>
+    </div>
+    <div class="gallery-grid reveal">
+      <div class="g-item big"><span class="g-placeholder">Añade tu foto aquí</span></div>
+      <div class="g-item"><span class="g-placeholder">Foto</span></div>
+      <div class="g-item"><span class="g-placeholder">Foto</span></div>
+      <div class="g-item"><span class="g-placeholder">Foto</span></div>
+      <div class="g-item"><span class="g-placeholder">Foto</span></div>
+    </div>
+  </div>
+</section>
+
+<section class="tarifas-cta reveal">
+  <span class="eyebrow">Precios</span>
+  <h2>¿Cuánto cuesta?</h2>
+  <p>Tarifas claras y sin sorpresas. Desde maquillaje de novia hasta clases personalizadas.</p>
+  <a href="tarifas.html" class="btn btn-rose">Ver todas las tarifas</a>
+</section>
+
+<section style="background:var(--rose-soft);padding:120px 0 100px;" id="cita">
+  <div class="container">
+    <div class="booking-inner">
+      <div class="booking-text reveal">
+        <span class="eyebrow">Reservas</span>
+        <h2>Hablemos de tu look.</h2>
+        <p>Cuéntame tu fecha, el tipo de evento y lo que tienes en mente. Te respondo en menos de 24 horas.</p>
+        <div class="contact-line"><svg viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12 19.79 19.79 0 0 1 1.61 3.35 2 2 0 0 1 3.6 1h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.91 8.6a16 16 0 0 0 6 6l.96-.96a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg><span>+34 600 000 000</span></div>
+        <div class="contact-line"><svg viewBox="0 0 24 24"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg></div>
+        <div class="contact-line"><svg viewBox="0 0 24 24"><rect x="2" y="2" width="20" height="20" rx="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg><span>@claraaguera.makeup</span></div>
+      </div>
+      <div class="reveal">
+        <form class="apt" id="aptForm">
+          <div class="form-ok" id="formOk" style="display:none;text-align:center;padding:40px 10px;">
+            <h3 style="font-size:1.4rem;margin-bottom:10px;">¡Mensaje recibido!</h3>
+            <p style="color:var(--ink-soft);font-size:0.9rem;">Te escribo en menos de 24 horas. Hasta pronto ✨</p>
+          </div>
+          <div id="formBody">
+            <div class="form-row">
+              <div class="field"><label>Nombre</label><input type="text" placeholder="Tu nombre" required></div>
+              <div class="field"><label>Teléfono</label><input type="tel" placeholder="+34 600 000 000"></div>
+            </div>
+            <div class="field"><label>Email</label><input type="email" placeholder="tu@email.com" required></div>
+            <div class="form-row">
+              <div class="field"><label>Servicio</label><select><option value="">Selecciona...</option><option>Maquillaje de novia</option><option>Editorial / Shooting</option><option>Evento & Social</option><option>Clase personalizada</option><option>Asesoría de imagen</option><option>Otro</option></select></div>
+              <div class="field"><label>Fecha del evento</label><input type="date"></div>
+            </div>
+            <div class="field"><label>Cuéntame más</label><textarea placeholder="Tipo de evento, look que tienes en mente, dudas..."></textarea></div>
+            <button type="submit" class="submit-btn">Enviar solicitud</button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="container">
+    <div class="footer-top">
+      <div class="footer-brand">
+        <img src="assets/img/logo.jpeg" alt="Clara Agüera Make Up" style="height:44px;border-radius:6px;margin-bottom:14px;">
+        <p>Maquilladora profesional en Málaga. Novias, editoriales y todo lo que hay en medio.</p>
+      </div>
+      <div class="footer-cols">
+        <div class="footer-col">
+          <h4>Páginas</h4>
+          <a href="servicios.html">Servicios</a>
+          <a href="galeria.html">Galería</a>
+          <a href="tarifas.html">Tarifas</a>
+          <a href="contacto.html">Contacto</a>
+        </div>
+        <div class="footer-col">
+          <h4>Contacto</h4>
+          <span>+34 600 000 000</span>
+          <span>Málaga, España</span>
+          <div class="social-row" style="margin-top:14px;">
+            <a href="#" aria-label="Instagram"><svg viewBox="0 0 24 24"><rect x="2" y="2" width="20" height="20" rx="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg></a>
+            <a href="#" aria-label="TikTok"><svg viewBox="0 0 24 24"><path d="M9 12a4 4 0 1 0 4 4V4a5 5 0 0 0 5 5"/></svg></a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2025 Clara Agüera Make Up · Todos los derechos reservados</span>
+      <span>Málaga, España</span>
+    </div>
+  </div>
+</footer>
+
+<script src="js/main.js"></script>
+</body>
+</html>

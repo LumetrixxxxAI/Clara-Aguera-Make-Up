@@ -1,0 +1,166 @@
+﻿<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Tarifas · Clara Agüera Make Up</title>
+<meta name="description" content="Tarifas de maquillaje profesional en Málaga. Novia, eventos, editorial y clases personalizadas.">
+<link rel="stylesheet" href="css/styles.css">
+<style>
+.page-hero{padding:160px 5vw 80px;background:var(--ink);text-align:center;}
+.page-hero .eyebrow{color:var(--rose-deep);margin-bottom:16px;}
+.page-hero h1{font-size:clamp(2.5rem,5vw,4rem);color:var(--rose-soft);font-style:italic;}
+.page-hero p{margin:18px auto 0;max-width:460px;font-size:1rem;color:rgba(242,214,214,0.6);font-weight:300;}
+
+.pricing-section{padding:100px 0;background:var(--ink);}
+.price-block{margin-bottom:70px;}
+.price-block-title{font-family:'Manrope',sans-serif;font-size:0.68rem;letter-spacing:0.2em;text-transform:uppercase;color:var(--rose-deep);font-weight:500;padding-bottom:18px;border-bottom:1px solid rgba(242,214,214,0.12);margin-bottom:0;}
+.price-row{display:flex;justify-content:space-between;align-items:baseline;padding:20px 0;border-bottom:1px solid rgba(242,214,214,0.07);}
+.price-row:last-child{border-bottom:none;}
+.price-name{font-family:'Fraunces',serif;font-size:1.08rem;color:var(--white);font-weight:400;}
+.price-desc{display:block;font-size:0.78rem;color:rgba(242,214,214,0.45);margin-top:4px;font-weight:300;}
+.price-val{font-size:1.05rem;color:var(--rose-deep);white-space:nowrap;padding-left:24px;font-weight:400;}
+
+.price-cols{display:grid;grid-template-columns:1fr 1fr;gap:70px;}
+
+.price-note{text-align:center;margin-top:60px;padding-top:40px;border-top:1px solid rgba(242,214,214,0.1);}
+.price-note p{font-size:0.84rem;color:rgba(242,214,214,0.45);margin-bottom:8px;font-weight:300;}
+
+.cta-band{background:var(--rose);padding:80px 5vw;text-align:center;}
+.cta-band h2{font-size:clamp(1.8rem,3.5vw,2.6rem);margin-bottom:14px;color:var(--ink);}
+.cta-band p{font-size:0.96rem;color:var(--ink-soft);max-width:400px;margin:0 auto 32px;font-weight:300;}
+
+@media(max-width:760px){.price-cols{grid-template-columns:1fr;gap:0;}}
+</style>
+</head>
+<body>
+
+<header id="hdr">
+  <a href="index.html"><img src="assets/img/logo.jpeg" alt="Clara Agüera Make Up" class="logo-img"></a>
+  <nav class="links">
+    <a href="servicios.html">Servicios</a>
+    <a href="galeria.html">Galería</a>
+    <a href="tarifas.html" class="active">Tarifas</a>
+    <a href="contacto.html" class="nav-cta">Reservar cita</a>
+  </nav>
+  <div class="burger" id="burger"><span></span><span></span><span></span></div>
+</header>
+
+<div class="mobile-menu" id="mobileMenu">
+  <a href="servicios.html" class="mob-link">Servicios</a>
+  <a href="galeria.html" class="mob-link">Galería</a>
+  <a href="tarifas.html" class="mob-link">Tarifas</a>
+  <a href="contacto.html" class="mob-link btn btn-dark" style="font-family:'Manrope';font-style:normal;font-size:0.8rem;">Reservar cita</a>
+</div>
+
+<div class="page-hero">
+  <span class="eyebrow">Precios</span>
+  <h1>Tarifas</h1>
+  <p>Transparencia total. Sin sorpresas. Todos los precios incluyen el material profesional.</p>
+</div>
+
+<section class="pricing-section">
+  <div class="container">
+
+    <div class="price-cols reveal">
+      <div class="price-block">
+        <div class="price-block-title">Novia &amp; Celebraciones</div>
+        <div class="price-row">
+          <div><div class="price-name">Maquillaje de novia</div><div class="price-desc">Incluye prueba previa + día de boda</div></div>
+          <div class="price-val">desde 280€</div>
+        </div>
+        <div class="price-row">
+          <div><div class="price-name">Prueba de novia</div><div class="price-desc">Sin servicio posterior</div></div>
+          <div class="price-val">90€</div>
+        </div>
+        <div class="price-row">
+          <div><div class="price-name">Madrina / invitada</div><div class="price-desc">Maquillaje completo</div></div>
+          <div class="price-val">75€</div>
+        </div>
+        <div class="price-row">
+          <div><div class="price-name">Comunión (niña)</div><div class="price-desc">Maquillaje natural y sutil</div></div>
+          <div class="price-val">55€</div>
+        </div>
+        <div class="price-row">
+          <div><div class="price-name">Pack novia + madrina</div><div class="price-desc">Reserva conjunta · ahorro incluido</div></div>
+          <div class="price-val">desde 340€</div>
+        </div>
+      </div>
+
+      <div class="price-block">
+        <div class="price-block-title">Maquillaje & Otros</div>
+        <div class="price-row">
+          <div><div class="price-name">Maquillaje básico</div><div class="price-desc">Look natural · día a día · sencillo</div></div>
+          <div class="price-val">desde 40€</div>
+        </div>
+        <div class="price-row">
+          <div><div class="price-name">Maquillaje de noche</div><div class="price-desc">Evento, cena, salida especial</div></div>
+          <div class="price-val">desde 55€</div>
+        </div>
+        <div class="price-row">
+          <div><div class="price-name">Look glam / fiesta</div><div class="price-desc">Impacto, brillo y larga duración</div></div>
+          <div class="price-val">desde 65€</div>
+        </div>
+        <div class="price-row">
+          <div><div class="price-name">Editorial / Shooting</div><div class="price-desc">Media jornada (hasta 4h)</div></div>
+          <div class="price-val">desde 200€</div>
+        </div>
+        <div class="price-row">
+          <div><div class="price-name">Asesoría de imagen</div><div class="price-desc">Colorimetría y morfología facial · 1h</div></div>
+          <div class="price-val">70€</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="price-note reveal">
+      <p>Desplazamiento incluido en Málaga capital · Consulta otras zonas de la provincia</p>
+      <p>IVA no incluido en los precios · Se solicita señal para confirmar la reserva</p>
+      <p style="margin-top:18px;color:rgba(242,214,214,0.3);font-size:0.74rem;">¿Necesitas algo diferente? Escríbeme y te preparo un presupuesto a medida.</p>
+    </div>
+
+  </div>
+</section>
+
+<div class="cta-band reveal">
+  <span class="eyebrow" style="color:var(--crimson);margin-bottom:14px;">¿Hablamos?</span>
+  <h2>Reserva tu cita ahora</h2>
+  <p>Cuéntame lo que necesitas y te respondo en menos de 24 horas.</p>
+  <a href="contacto.html" class="btn btn-dark">Contactar con Clara</a>
+</div>
+
+<footer>
+  <div class="container">
+    <div class="footer-top">
+      <div class="footer-brand">
+        <img src="assets/img/logo.jpeg" alt="Clara Agüera Make Up" style="height:44px;border-radius:6px;margin-bottom:14px;">
+        <p>Maquilladora profesional en Málaga. Novias, editoriales y todo lo que hay en medio.</p>
+      </div>
+      <div class="footer-cols">
+        <div class="footer-col">
+          <h4>Páginas</h4>
+          <a href="servicios.html">Servicios</a>
+          <a href="galeria.html">Galería</a>
+          <a href="tarifas.html">Tarifas</a>
+          <a href="contacto.html">Contacto</a>
+        </div>
+        <div class="footer-col">
+          <h4>Contacto</h4>
+          <span>+34 600 000 000</span>
+          <span>Málaga, España</span>
+          <div class="social-row" style="margin-top:14px;">
+            <a href="#" aria-label="Instagram"><svg viewBox="0 0 24 24"><rect x="2" y="2" width="20" height="20" rx="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg></a>
+            <a href="#" aria-label="TikTok"><svg viewBox="0 0 24 24"><path d="M9 12a4 4 0 1 0 4 4V4a5 5 0 0 0 5 5"/></svg></a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2025 Clara Agüera Make Up · Todos los derechos reservados</span>
+      <span>Málaga, España</span>
+    </div>
+  </div>
+</footer>
+
+<script src="js/main.js"></script>
+</body>
+</html>

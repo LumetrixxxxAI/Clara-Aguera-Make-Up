@@ -1,0 +1,190 @@
+﻿<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Galería · Clara Agüera Make Up</title>
+<meta name="description" content="Galería de trabajos de Clara Agüera, maquilladora profesional en Málaga.">
+<link rel="stylesheet" href="css/styles.css">
+<style>
+.page-hero{padding:160px 5vw 80px;text-align:center;background:var(--rose-soft);}
+.page-hero .eyebrow{margin-bottom:16px;}
+.page-hero h1{font-size:clamp(2.5rem,5vw,4rem);font-style:italic;}
+.page-hero p{margin:18px auto 0;max-width:460px;font-size:1rem;color:var(--ink-soft);font-weight:300;}
+
+.gallery-quote{padding:50px 5vw 20px;text-align:center;}
+.gallery-quote blockquote{font-family:'Fraunces',serif;font-style:italic;font-size:clamp(1.4rem,2.8vw,2rem);color:var(--crimson-d);font-weight:400;line-height:1.35;max-width:640px;margin:0 auto;letter-spacing:-0.01em;}
+.gallery-quote blockquote::before{content:'\201C';font-size:3rem;line-height:0;vertical-align:-0.6em;color:var(--rose-deep);margin-right:4px;}
+.gallery-quote blockquote::after{content:'\201D';font-size:3rem;line-height:0;vertical-align:-0.6em;color:var(--rose-deep);margin-left:4px;}
+.gallery-quote cite{display:block;margin-top:16px;font-family:'Manrope',sans-serif;font-style:normal;font-size:0.66rem;letter-spacing:0.2em;text-transform:uppercase;color:var(--crimson);opacity:0.7;}
+
+.gallery-section{padding:30px 0 100px;background:var(--rose-soft);}
+.masonry{columns:2;column-gap:16px;padding:0 5vw;max-width:860px;margin:0 auto;}
+.masonry-item{break-inside:avoid;margin-bottom:16px;border-radius:16px;overflow:hidden;background:var(--rose);border:1px solid rgba(184,8,8,0.1);cursor:pointer;position:relative;transition:transform .35s ease;}
+.masonry-item:hover{transform:scale(1.02);}
+.masonry-item img{width:100%;display:block;border-radius:16px;}
+.masonry-placeholder{width:100%;border-radius:16px;background:var(--rose);display:flex;align-items:center;justify-content:center;font-family:'Fraunces',serif;font-style:italic;font-size:0.85rem;color:var(--crimson-d);opacity:0.4;}
+.masonry-item .overlay{position:absolute;inset:0;background:linear-gradient(transparent 50%,rgba(28,10,13,0.5));opacity:0;transition:opacity .35s ease;border-radius:16px;display:flex;align-items:flex-end;padding:18px;}
+.masonry-item:hover .overlay{opacity:1;}
+.overlay-label{font-family:'Fraunces',serif;font-style:italic;color:var(--white);font-size:0.9rem;}
+
+.ig-band{background:var(--ink);text-align:center;padding:70px 5vw;}
+.ig-band h2{font-size:clamp(1.6rem,3vw,2.2rem);color:var(--rose-soft);margin-bottom:12px;}
+.ig-band p{font-size:0.9rem;color:rgba(242,214,214,0.55);max-width:360px;margin:0 auto 28px;font-weight:300;}
+.ig-btn{display:inline-flex;align-items:center;gap:10px;padding:13px 28px;border-radius:30px;border:1px solid rgba(242,214,214,0.3);color:var(--rose-soft);font-size:0.76rem;letter-spacing:0.08em;text-transform:uppercase;font-weight:600;transition:background .3s,border-color .3s;}
+.ig-btn:hover{background:rgba(242,214,214,0.1);border-color:rgba(242,214,214,0.5);}
+.ig-btn svg{width:18px;height:18px;stroke:currentColor;fill:none;stroke-width:1.5;}
+
+@media(max-width:580px){.masonry{columns:1;}}
+</style>
+</head>
+<body>
+
+<header id="hdr">
+  <a href="index.html"><img src="assets/img/logo.jpeg" alt="Clara Agüera Make Up" class="logo-img"></a>
+  <nav class="links">
+    <a href="servicios.html">Servicios</a>
+    <a href="galeria.html" class="active">Galería</a>
+    <a href="tarifas.html">Tarifas</a>
+    <a href="contacto.html" class="nav-cta">Reservar cita</a>
+  </nav>
+  <div class="burger" id="burger"><span></span><span></span><span></span></div>
+</header>
+
+<div class="mobile-menu" id="mobileMenu">
+  <a href="servicios.html" class="mob-link">Servicios</a>
+  <a href="galeria.html" class="mob-link">Galería</a>
+  <a href="tarifas.html" class="mob-link">Tarifas</a>
+  <a href="contacto.html" class="mob-link btn btn-dark" style="font-family:'Manrope';font-style:normal;font-size:0.8rem;">Reservar cita</a>
+</div>
+
+<div class="page-hero">
+  <span class="eyebrow">Portfolio</span>
+  <h1>Mi trabajo</h1>
+  <p>Cada look cuenta una historia. Aquí van las mías.</p>
+</div>
+
+
+<section class="gallery-section">
+  <div class="masonry" id="masonry">
+
+    <div class="masonry-item">
+      <img src="assets/img/editorial-1.webp" alt="Editorial · Look verde dramático">
+      <div class="overlay"><span class="overlay-label">Editorial · Look dramático</span></div>
+    </div>
+    <div class="masonry-item">
+      <img src="assets/img/editorial-2.webp" alt="Editorial · Blush colorido">
+      <div class="overlay"><span class="overlay-label">Editorial · Color y textura</span></div>
+    </div>
+    <div class="masonry-item">
+      <img src="assets/img/editorial-3.webp" alt="Editorial · Delineado azul con pedrería">
+      <div class="overlay"><span class="overlay-label">Editorial · Pedrería y liner</span></div>
+    </div>
+    <div class="masonry-item">
+      <img src="assets/img/editorial-4.webp" alt="Editorial · Look plateado">
+      <div class="overlay"><span class="overlay-label">Editorial · Glam plateado</span></div>
+    </div>
+    <div class="masonry-item">
+      <img src="assets/img/editorial-5.webp" alt="Editorial · Eyeliner tribal amarillo">
+      <div class="overlay"><span class="overlay-label">Editorial · Tribal &amp; color</span></div>
+    </div>
+    <div class="masonry-item">
+      <img src="assets/img/invitada-1.jfif" alt="Maquillaje invitada 1">
+      <div class="overlay"><span class="overlay-label">Invitada · Look elegante</span></div>
+    </div>
+    <div class="masonry-item">
+      <img src="assets/img/invitada-2.jfif" alt="Maquillaje invitada 2">
+      <div class="overlay"><span class="overlay-label">Invitada · Glam suave</span></div>
+    </div>
+    <div class="masonry-item">
+      <img src="assets/img/invitada-3.jfif" alt="Maquillaje invitada 3">
+      <div class="overlay"><span class="overlay-label">Invitada · Look romántico</span></div>
+    </div>
+    <div class="masonry-item">
+      <img src="assets/img/invitada-4.jfif" alt="Maquillaje invitada 4">
+      <div class="overlay"><span class="overlay-label">Invitada · Natural y luminoso</span></div>
+    </div>
+    <div class="masonry-item">
+      <img src="assets/img/invitada-5.jfif" alt="Maquillaje invitada 5">
+      <div class="overlay"><span class="overlay-label">Invitada · Noche especial</span></div>
+    </div>
+    <div class="masonry-item">
+      <img src="assets/img/maquillajenovia-1.jfif" alt="Maquillaje de novia">
+      <div class="overlay"><span class="overlay-label">Novia · Look nupcial</span></div>
+    </div>
+    <div class="masonry-item">
+      <img src="assets/img/pielmadura-1.jfif" alt="Maquillaje piel madura 1">
+      <div class="overlay"><span class="overlay-label">Piel madura · Natural y luminoso</span></div>
+    </div>
+    <div class="masonry-item">
+      <img src="assets/img/pielmadura-2.jfif" alt="Maquillaje piel madura 2">
+      <div class="overlay"><span class="overlay-label">Piel madura · Resultado impecable</span></div>
+    </div>
+    <div class="masonry-item">
+      <img src="assets/img/pielmadura-3.jfif" alt="Maquillaje piel madura 3">
+      <div class="overlay"><span class="overlay-label">Piel madura · Elegancia natural</span></div>
+    </div>
+    <div class="masonry-item">
+      <img src="assets/img/maquillajesoftglam-1.jfif" alt="Maquillaje soft glam">
+      <div class="overlay"><span class="overlay-label">Soft glam · Luminoso y suave</span></div>
+    </div>
+
+  </div>
+</section>
+
+<div class="ig-band">
+  <h2>Sígueme en Instagram</h2>
+  <p>Más looks, behind the scenes y novedades cada semana.</p>
+  <a href="#" class="ig-btn">
+    <svg viewBox="0 0 24 24"><rect x="2" y="2" width="20" height="20" rx="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
+    @claraaguera.makeup
+  </a>
+</div>
+
+<footer>
+  <div class="container">
+    <div class="footer-top">
+      <div class="footer-brand">
+        <p>Maquilladora profesional en Málaga. Novias, editoriales y todo lo que hay en medio.</p>
+      </div>
+      <div class="footer-cols">
+        <div class="footer-col">
+          <h4>Páginas</h4>
+          <a href="servicios.html">Servicios</a>
+          <a href="galeria.html">Galería</a>
+          <a href="tarifas.html">Tarifas</a>
+          <a href="contacto.html">Contacto</a>
+        </div>
+        <div class="footer-col">
+          <h4>Contacto</h4>
+          <span>+34 600 000 000</span>
+          <span>Málaga, España</span>
+          <div class="social-row" style="margin-top:14px;">
+            <a href="#" aria-label="Instagram"><svg viewBox="0 0 24 24"><rect x="2" y="2" width="20" height="20" rx="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg></a>
+            <a href="#" aria-label="TikTok"><svg viewBox="0 0 24 24"><path d="M9 12a4 4 0 1 0 4 4V4a5 5 0 0 0 5 5"/></svg></a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2025 Clara Agüera Make Up · Todos los derechos reservados</span>
+      <span>Málaga, España</span>
+    </div>
+  </div>
+</footer>
+
+<script src="js/main.js"></script>
+<script>
+document.querySelectorAll('.filter-btn').forEach(btn => {
+  btn.addEventListener('click', () => {
+    document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
+    btn.classList.add('active');
+    const filter = btn.dataset.filter;
+    document.querySelectorAll('.masonry-item').forEach(item => {
+      item.style.display = (filter === 'all' || item.dataset.cat === filter) ? '' : 'none';
+    });
+  });
+});
+</script>
+</body>
+</html>
