@@ -30,7 +30,16 @@
 .cta-band h2{font-size:clamp(1.8rem,3.5vw,2.6rem);margin-bottom:14px;color:var(--ink);}
 .cta-band p{font-size:0.96rem;color:var(--ink-soft);max-width:400px;margin:0 auto 32px;font-weight:300;}
 
-@media(max-width:760px){.price-cols{grid-template-columns:1fr;gap:0;}}
+@media(max-width:760px){
+  .price-cols{grid-template-columns:1fr;gap:0;}
+  .pricing-section{padding:60px 0;}
+  .page-hero{padding:120px 5vw 60px;}
+  .cta-band{padding:60px 5vw;}
+}
+@media(max-width:480px){
+  .price-row{flex-direction:column;gap:4px;padding:16px 0;}
+  .price-val{padding-left:0;font-size:0.95rem;color:var(--rose);}
+}
 </style>
 </head>
 <body>

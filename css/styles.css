@@ -181,6 +181,18 @@ footer {
   nav.links { display: none; }
   .burger { display: flex; }
 }
+
+@media (max-width: 760px) {
+  .footer-top { flex-direction: column; gap: 36px; }
+  .footer-cols { gap: 36px; }
+  .footer-bottom { flex-direction: column; text-align: center; gap: 6px; }
+}
+
+@media (max-width: 480px) {
+  .footer-cols { flex-direction: column; gap: 28px; }
+  .btn { padding: 13px 26px; font-size: 0.74rem; }
+}
+
 @media (prefers-reduced-motion: reduce) {
   *, *::before, *::after { animation: none !important; transition: none !important; }
 }
