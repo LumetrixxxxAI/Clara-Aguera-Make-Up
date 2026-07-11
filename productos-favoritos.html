@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Productos Favoritos · Clara Agüera Make Up</title>
+<meta name="description" content="Los productos de maquillaje favoritos de Clara Agüera. Selección personal de lo que más usa y recomienda.">
+<link rel="stylesheet" href="css/styles.css">
+<style>
+.page-hero{padding:160px 5vw 80px;text-align:center;background:var(--rose-soft);}
+.page-hero .eyebrow{margin-bottom:16px;}
+.page-hero h1{font-size:clamp(2.5rem,5vw,4rem);font-style:italic;}
+.page-hero p{margin:18px auto 0;max-width:460px;font-size:1rem;color:var(--ink-soft);font-weight:300;}
+
+.products-section{padding:30px 0 100px;background:var(--rose-soft);}
+.products-grid{columns:2;column-gap:16px;padding:0 5vw;max-width:860px;margin:0 auto;}
+
+.product-item{break-inside:avoid;margin-bottom:16px;border-radius:16px;overflow:hidden;background:var(--rose);border:1px solid rgba(184,8,8,0.1);cursor:pointer;position:relative;transition:transform .35s ease;display:block;text-decoration:none;}
+.product-item:hover{transform:scale(1.02);}
+.product-item img{width:100%;display:block;}
+.product-placeholder{width:100%;background:var(--rose);display:flex;align-items:center;justify-content:center;font-family:'Fraunces',serif;font-style:italic;font-size:0.85rem;color:var(--crimson-d);opacity:0.4;}
+
+.product-overlay{position:absolute;inset:0;background:linear-gradient(transparent 40%,rgba(28,10,13,0.75));opacity:0;transition:opacity .35s ease;border-radius:16px;display:flex;flex-direction:column;justify-content:flex-end;padding:22px 18px;}
+.product-item:hover .product-overlay{opacity:1;}
+.product-name{font-family:'Fraunces',serif;font-style:italic;color:var(--white);font-size:1rem;line-height:1.2;margin-bottom:4px;}
+.product-brand{font-family:'Manrope',sans-serif;font-size:0.68rem;letter-spacing:0.1em;text-transform:uppercase;color:rgba(242,214,214,0.7);}
+.product-buy{display:inline-flex;align-items:center;gap:6px;margin-top:10px;font-size:0.68rem;letter-spacing:0.08em;text-transform:uppercase;color:var(--rose-soft);font-weight:600;font-family:'Manrope',sans-serif;}
+.product-buy svg{width:12px;height:12px;stroke:currentColor;fill:none;stroke-width:2;}
+
+@media(max-width:580px){.products-grid{columns:1;}}
+</style>
+</head>
+<body>
+
+<header id="hdr">
+  <a href="index.html"><img src="assets/img/logo.jpeg" alt="Clara Agüera Make Up" class="logo-img"></a>
+  <nav class="links">
+    <a href="productos-favoritos.html" class="active">Productos favoritos</a>
+    <a href="galeria.html">Galería</a>
+    <a href="tarifas.html">Tarifas</a>
+    <a href="contacto.html" class="nav-cta">Reservar cita</a>
+  </nav>
+  <div class="burger" id="burger"><span></span><span></span><span></span></div>
+</header>
+
+<div class="mobile-menu" id="mobileMenu">
+  <a href="productos-favoritos.html" class="mob-link">Productos favoritos</a>
+  <a href="galeria.html" class="mob-link">Galería</a>
+  <a href="tarifas.html" class="mob-link">Tarifas</a>
+  <a href="contacto.html" class="mob-link btn btn-dark" style="font-family:'Manrope';font-style:normal;font-size:0.8rem;">Reservar cita</a>
+</div>
+
+<div class="page-hero">
+  <span class="eyebrow">Mi selección</span>
+  <h1>Productos favoritos</h1>
+  <p>Lo que tengo siempre en mi maletín. Productos que uso, pruebo y recomiendo de verdad.</p>
+</div>
+
+<section class="products-section">
+  <div class="products-grid">
+
+    <!-- EJEMPLO — sustituye src, nombre, marca y href por el producto real -->
+    <a href="#" target="_blank" class="product-item">
+      <div class="product-placeholder" style="height:480px;">Foto producto</div>
+      <div class="product-overlay">
+        <div class="product-name">Nombre del producto</div>
+        <div class="product-brand">Marca · Categoría</div>
+        <span class="product-buy">Comprar <svg viewBox="0 0 16 16"><line x1="3" y1="13" x2="13" y2="3"/><polyline points="7 3 13 3 13 9"/></svg></span>
+      </div>
+    </a>
+
+    <a href="#" target="_blank" class="product-item">
+      <div class="product-placeholder" style="height:380px;">Foto producto</div>
+      <div class="product-overlay">
+        <div class="product-name">Nombre del producto</div>
+        <div class="product-brand">Marca · Categoría</div>
+        <span class="product-buy">Comprar <svg viewBox="0 0 16 16"><line x1="3" y1="13" x2="13" y2="3"/><polyline points="7 3 13 3 13 9"/></svg></span>
+      </div>
+    </a>
+
+    <a href="#" target="_blank" class="product-item">
+      <div class="product-placeholder" style="height:440px;">Foto producto</div>
+      <div class="product-overlay">
+        <div class="product-name">Nombre del producto</div>
+        <div class="product-brand">Marca · Categoría</div>
+        <span class="product-buy">Comprar <svg viewBox="0 0 16 16"><line x1="3" y1="13" x2="13" y2="3"/><polyline points="7 3 13 3 13 9"/></svg></span>
+      </div>
+    </a>
+
+    <a href="#" target="_blank" class="product-item">
+      <div class="product-placeholder" style="height:500px;">Foto producto</div>
+      <div class="product-overlay">
+        <div class="product-name">Nombre del producto</div>
+        <div class="product-brand">Marca · Categoría</div>
+        <span class="product-buy">Comprar <svg viewBox="0 0 16 16"><line x1="3" y1="13" x2="13" y2="3"/><polyline points="7 3 13 3 13 9"/></svg></span>
+      </div>
+    </a>
+
+  </div>
+</section>
+
+<footer>
+  <div class="container">
+    <div class="footer-top">
+      <div class="footer-brand">
+        <p>Maquilladora profesional en Málaga. Novias, editoriales y todo lo que hay en medio.</p>
+      </div>
+      <div class="footer-cols">
+        <div class="footer-col">
+          <h4>Páginas</h4>
+          <a href="productos-favoritos.html">Productos favoritos</a>
+          <a href="galeria.html">Galería</a>
+          <a href="tarifas.html">Tarifas</a>
+          <a href="contacto.html">Contacto</a>
+        </div>
+        <div class="footer-col">
+          <h4>Contacto</h4>
+          <span>+34 600 000 000</span>
+          <span>Málaga, España</span>
+          <div class="social-row" style="margin-top:14px;">
+            <a href="#" aria-label="Instagram"><svg viewBox="0 0 24 24"><rect x="2" y="2" width="20" height="20" rx="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg></a>
+            <a href="#" aria-label="TikTok"><svg viewBox="0 0 24 24"><path d="M9 12a4 4 0 1 0 4 4V4a5 5 0 0 0 5 5"/></svg></a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2025 Clara Agüera Make Up · Todos los derechos reservados</span>
+      <span>Málaga, España</span>
+    </div>
+  </div>
+</footer>
+
+<script src="js/main.js"></script>
+</body>
+</html>
