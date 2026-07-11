@@ -69,6 +69,15 @@
 .contact-line{display:flex;align-items:center;gap:14px;margin-bottom:14px;}
 .contact-line svg{width:18px;height:18px;stroke:var(--crimson);fill:none;stroke-width:1.6;flex-shrink:0;}
 .contact-line span{font-size:0.9rem;color:var(--ink-soft);}
+.field{margin-bottom:22px;}
+.field label{display:block;font-size:0.66rem;letter-spacing:0.1em;text-transform:uppercase;color:var(--crimson-d);margin-bottom:9px;font-weight:500;}
+.field input,.field select,.field textarea{width:100%;border:none;border-bottom:1px solid rgba(184,8,8,0.2);background:transparent;padding:10px 0;font-family:'Manrope';font-size:0.92rem;color:var(--ink);transition:border-color .3s;appearance:none;}
+.field input:focus,.field select:focus,.field textarea:focus{outline:none;border-bottom-color:var(--crimson);}
+.field textarea{resize:vertical;min-height:80px;}
+.field select{cursor:pointer;}
+.form-row{display:grid;grid-template-columns:1fr 1fr;gap:18px;}
+.submit-btn{width:100%;background:var(--crimson);color:var(--white);border:none;padding:17px;border-radius:40px;font-size:0.8rem;letter-spacing:0.1em;text-transform:uppercase;font-weight:600;margin-top:6px;transition:background .3s,transform .3s;cursor:pointer;font-family:'Manrope',sans-serif;}
+.submit-btn:hover{background:var(--crimson-d);transform:translateY(-2px);}
 
 @keyframes fadeUp{from{opacity:0;transform:translateY(24px);}to{opacity:1;transform:translateY(0);}}
 @keyframes bob{0%,100%{transform:translateX(-50%) translateY(0);}50%{transform:translateX(-50%) translateY(8px);}}
