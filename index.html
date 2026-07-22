@@ -57,9 +57,10 @@
 .gallery-head h2{font-size:clamp(1.8rem,3.2vw,2.5rem);}
 .gallery-link{font-size:0.78rem;letter-spacing:0.06em;text-transform:uppercase;color:var(--crimson);font-weight:600;display:flex;align-items:center;gap:8px;}
 .gallery-link svg{width:16px;height:16px;stroke:currentColor;fill:none;stroke-width:2;}
-.gallery-grid{display:grid;grid-template-columns:repeat(3,1fr);grid-template-rows:260px 260px;gap:14px;}
+.gallery-grid{display:grid;grid-template-columns:2fr 1fr 1fr 1fr;grid-template-rows:260px 260px;gap:14px;}
 .g-item{border-radius:16px;background:var(--rose);border:1px solid rgba(184,8,8,0.1);display:flex;align-items:center;justify-content:center;overflow:hidden;cursor:pointer;transition:transform .35s ease;}
 .g-item:hover{transform:scale(1.02);}
+.g-item.big{grid-row:span 2;}
 .g-item img{width:100%;height:100%;object-fit:cover;}
 .g-placeholder{font-family:'Fraunces',serif;font-style:italic;font-size:0.9rem;color:var(--crimson-d);opacity:0.4;}
 
@@ -94,6 +95,7 @@
   .services-grid{grid-template-columns:1fr 1fr;}
   .gallery-grid{grid-template-columns:1fr 1fr;grid-template-rows:auto;}
   .g-item{min-height:220px;}
+  .g-item.big{grid-row:span 1;}
   .booking-inner{grid-template-columns:1fr;gap:44px;}
 }
 @media(max-width:580px){
@@ -223,8 +225,8 @@
       <a href="galeria.html" class="gallery-link">Ver todo <svg viewBox="0 0 16 16"><line x1="3" y1="13" x2="13" y2="3"/><polyline points="7 3 13 3 13 9"/></svg></a>
     </div>
     <div class="gallery-grid reveal">
+      <div class="g-item big"><img src="assets/img/editorial-4.webp" alt="Editorial glam plateado"></div>
       <div class="g-item"><img src="assets/img/invitada-3.jfif" alt="Invitada look romántico"></div>
-      <div class="g-item"><img src="assets/img/editorial-4.webp" alt="Editorial glam plateado"></div>
       <div class="g-item"><img src="assets/img/maquillajenovia-1.jfif" alt="Novia look nupcial"></div>
       <div class="g-item"><img src="assets/img/maquillajesoftglam-1.jfif" alt="Soft glam luminoso y suave"></div>
       <div class="g-item"><img src="assets/img/pielmadura-3.jfif" alt="Piel madura elegancia natural"></div>
